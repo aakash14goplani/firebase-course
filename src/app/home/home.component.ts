@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../model/course';
 import { Observable, of } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'home',

@@ -1,0 +1,347 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "tsconfigRootOir": "./",
+        "project": [
+          "tsconfig.json",
+          "tsconfig.spec.json"
+        ],
+        "sourceType": "module",
+        "ecmaVersion": 2020,
+        "env": {
+          "es6": true
+        },
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:ngrx/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "prefix": "",
+            "style": "kebab-case",
+            "type": "element"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "prefix": "",
+            "style": "camelCase",
+            "type": "attribute"
+          }
+        ],
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "object-curly-spacing": [
+          "error",
+          "always"
+        ],
+        "max-len": [
+          "error",
+          {
+            "code": 300
+          }
+        ],
+        "@typescript-eslint/array-type": "off",
+        "arrow-body-style": [
+          "error",
+          "as-needed"
+        ],
+        "arrow-parens": [
+          "error",
+          "as-needed",
+          {
+            "requireForBlockBody": true
+          }
+        ],
+        "curly": [
+          "error",
+          "multi-line"
+        ],
+        "eol-last": [
+          "error",
+          "always"
+        ],
+        "arrow-spacing": [
+          "error",
+          {
+            "before": true,
+            "after": true
+          }
+        ],
+        "no-confusing-arrow": [
+          "error",
+          {
+            "allowParens": true
+          }
+        ],
+        "eqeqeq": [
+          "error",
+          "smart"
+        ],
+        "no-restricted-imports": [
+          "warn",
+          {
+            "name": "rxjs/Rx",
+            "message": "Please use rxjs instead."
+          },
+          {
+            "name": "rxjs/operators",
+            "message": "Please use rxjs instead."
+          },
+          {
+            "name": "lodash",
+            "message": "Please use lodash-es instead."
+          },
+          {
+            "name": "moment",
+            "message": "Please use helperFunctions from dates.ts instead."
+          }
+        ],
+        "max-statements-per-line": [
+          "error",
+          {
+            "max": 1
+          }
+        ],
+        "no-multi-spaces": "error",
+        "func-call-spacing": [
+          "error",
+          "never"
+        ],
+        "key-spacing": [
+          "error",
+          {
+            "beforeColon": false,
+            "afterColon": true
+          }
+        ],
+        "lines-between-class-members": [
+          "error",
+          "always",
+          {
+            "exceptAfterSingleLine": true
+          }
+        ],
+        "no-trailing-spaces": "error",
+        "space-before-blocks": "error",
+        "keyword-spacing": [
+          "error",
+          {
+            "before": true,
+            "after": true
+          }
+        ],
+        "space-unary-ops": [
+          2,
+          {
+            "words": true,
+            "nonwords": false
+          }
+        ],
+        "space-infix-ops": [
+          "error",
+          {
+            "int32Hint": true
+          }
+        ],
+        "spaced-comment": [
+          "error",
+          "always",
+          {
+            "block": {
+              "balanced": true,
+              "exceptions": [
+                "*"
+              ],
+              "markers": [
+                "/"
+              ]
+            }
+          }
+        ],
+        "block-spacing": [
+          "error",
+          "always"
+        ],
+        "brace-style": [
+          "error",
+          "1tbs",
+          {
+            "allowSingleLine": true
+          }
+        ],
+        "indent": "off",
+        "@typescript-eslint/indent": [
+          "error",
+          2,
+          {
+            "SwitchCase": 1
+          }
+        ],
+        "no-console": [
+          "warn",
+          {
+            "allow": [
+              "error",
+              "debug"
+            ]
+          }
+        ],
+        "no-empty": [
+          "error",
+          {
+            "allowEmptyCatch": true
+          }
+        ],
+        "no-empty-function": "off",
+        "ngrx/select-style": "error",
+        "ngrx/prefer-effect-callback-in-block-statement": "off",
+        "ngrx/no-typed-global-store": "off",
+        "@typescript-eslint/no-empty-function": [
+          "error",
+          {
+            "allow": [
+              "functions",
+              "arrowFunctions",
+              "constructors",
+              "methods"
+            ]
+          }
+        ],
+        "@typescript-eslint/consistent-type-assertions": [
+          "warn",
+          {
+            "assertionStyle": "as"
+          }
+        ],
+        "quote-props": [
+          "error",
+          "as-needed"
+        ],
+        "quotes": [
+          "error",
+          "single"
+        ],
+        "no-var": "error",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": [
+          "error",
+          {
+            "ignoreTypeValueShadow": true,
+            "ignoreFunctionTypeParameterNameValueShadow": true
+          }
+        ],
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "no-extra-semi": "error",
+        "semi": [
+          "error",
+          "always"
+        ],
+        "semi-spacing": [
+          "error",
+          {
+            "before": false,
+            "after": true
+          }
+        ],
+        "comma-spacing": [
+          "error",
+          {
+            "before": false,
+            "after": true
+          }
+        ],
+        "space-before-function-paren": [
+          "error",
+          {
+            "anonymous": "ignore",
+            "named": "ignore",
+            "asyncArrow": "always"
+          }
+        ],
+        "no-irregular-whitespace": "off",
+        "comma-dangle": [
+          "error",
+          "never"
+        ],
+        "no-multiple-empty-lines": [
+          "error",
+          {
+            "max": 1,
+            "maxEOF": 1,
+            "maxBOF": 0
+          }
+        ],
+        "@typescript-eslint/type-annotation-spacing": [
+          "error",
+          {
+            "before": false,
+            "after": true,
+            "overrides": {
+              "arrow": {
+                "before": true,
+                "after": true
+              }
+            }
+          }
+        ],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": [
+              "class",
+              "interface",
+              "enum"
+            ],
+            "format": [
+              "PascalCase",
+              "UPPER_CASE"
+            ],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+          },
+          {
+            "selector": "default",
+            "format": [
+              "camelCase",
+              "PascalCase",
+              "snake_case",
+              "UPPER_CASE"
+            ],
+            "leadingUnderscore": "allow",
+            "trailingUnderscore": "forbid"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "parser": "@angular-eslint/template-parser",
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "eslint:recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Course } from '../model/course';
-import { catchError, concatMap, last, map, take, tap } from 'rxjs/operators';
+import { catchError, concatMap, last, map, take, tap } from 'rxjs';
 import { from, Observable, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 import { AngularFireStorage } from '@angular/fire/compat/storage';

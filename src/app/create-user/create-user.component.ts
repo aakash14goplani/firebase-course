@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
-import {catchError} from 'rxjs/operators';
-import {throwError} from 'rxjs';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { catchError } from 'rxjs';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'create-user',
@@ -11,24 +11,24 @@ import {throwError} from 'rxjs';
 })
 export class CreateUserComponent {
 
-    form = this.fb.group({
-        email: ['', [Validators.email, Validators.required]],
-        password: ['', [Validators.required, Validators.minLength(5)]],
-        admin: [false]
-    });
+  form = this.fb.group({
+    email: ['', [Validators.email, Validators.required]],
+    password: ['', [Validators.required, Validators.minLength(5)]],
+    admin: [false]
+  });
 
   constructor(
-      private fb: FormBuilder,
-      private http: HttpClient) {
+    private fb: FormBuilder,
+    private http: HttpClient) {
 
   }
 
-    onCreateUser() {
+  onCreateUser() {
 
-        const user = this.form.value;
+    const user = this.form.value;
 
-        console.log(user);
+    console.log(user);
 
-    }
+  }
 
 }

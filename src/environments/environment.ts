@@ -5,7 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-
+    apiKey: secretKey.firebase,
+    authDomain: secretKey.firebaseAuthDomain,
+    projectId: secretKey.firebaseProjectId,
+    storageBucket: secretKey.firebaseStorageBucket,
+    messagingSenderId: secretKey.firebaseMessagingSenderId,
+    appId: secretKey.firebaseAppId
   },
   api: {
 
@@ -19,4 +24,6 @@ export const environment = {
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
  */
-import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+import 'zone.js/plugins/zone-error'; // Included with Angular CLI.import secretKey from './secrets';
+import secretKey from './secrets';
+
