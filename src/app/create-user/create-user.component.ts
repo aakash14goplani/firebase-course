@@ -20,15 +20,10 @@ export class CreateUserComponent {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient) {
-
   }
 
   onCreateUser() {
-
     const user = this.form.value;
-
-    console.log(user);
-
   }
 
 }

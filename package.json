@@ -13,6 +13,7 @@
     "local-dev": "firebase emulators:start --only firestore,auth,functions --import test-data",
     "empty-emulator": "firebase emulators:start",
     "emulator": "firebase emulators:start --import test-data",
+    "emulator-firestore": "firebase emulators:start --only firestore",
     "export": "firebase emulators:export test-data"
   },
   "private": true,
@@ -29,7 +30,7 @@
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
     "firebase": "^9.6.8",
-    "firebase-tools": "^9.23.3",
+    "firebase-tools": "^10.3.1",
     "firebaseui": "^6.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

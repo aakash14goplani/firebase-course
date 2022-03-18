@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { combineLatest, distinctUntilChanged } from 'rxjs';
@@ -21,7 +22,7 @@ export class AboutComponent {
       const courseRef = await coursesCollection.add(newCourse);
       const lessons = await courseRef.collection('lessons');
       const courseLessons = findLessonsForCourse((course as any)['id']);
-      console.log(`Uploading course ${(course as any)['description']}`);
+
       for (const lesson of courseLessons) {
         const newLesson = this.removeId(lesson);
         delete newLesson.courseId;
@@ -42,12 +43,11 @@ export class AboutComponent {
       distinctUntilChanged()
     ).subscribe({
       next: ([doc, snapshotChanges, valueChanges]) => {
-        console.log('Document Change: ', doc.id, doc.data());
+        /* console.log('Document Change: ', doc.id, doc.data());
         console.log('Snapshot Change: ', snapshotChanges.payload.id, snapshotChanges.payload.data());
-        console.log('Value Change: ', valueChanges);
+        console.log('Value Change: ', valueChanges); */
       },
-      error: err => console.log('Error: ', err),
-      complete: () => console.log('Completed!')
+      error: err => console.error('Error: ', err)
     });
   }
 
@@ -58,8 +58,7 @@ export class AboutComponent {
     ).get()
       .subscribe({
         next: data => data.forEach(doc => console.log(doc.id, doc.data())),
-        error: err => console.log('Error: ', err),
-        complete: () => console.log('Completed!')
+        error: err => console.error('Error: ', err)
       });
   }
 
@@ -70,8 +69,7 @@ export class AboutComponent {
     ).get()
       .subscribe({
         next: data => data.forEach(doc => console.log(doc.id, doc.data())),
-        error: err => console.log('Error: ', err),
-        complete: () => console.log('Completed!')
+        error: err => console.error('Error: ', err)
       });
   }
 
