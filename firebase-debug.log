@@ -1,0 +1,98 @@
+[debug] [2022-03-19T08:31:18.933Z] ----------------------------------------------------------------------
+[debug] [2022-03-19T08:31:18.936Z] Command:       F:\Nodejs\node.exe F:\Angular\Firebase Angular Course\firebase-latest-deps\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --import test-data
+[debug] [2022-03-19T08:31:18.937Z] CLI Version:   10.4.0
+[debug] [2022-03-19T08:31:18.938Z] Platform:      win32
+[debug] [2022-03-19T08:31:18.938Z] Node Version:  v16.13.1
+[debug] [2022-03-19T08:31:18.939Z] Time:          Sat Mar 19 2022 14:01:18 GMT+0530 (India Standard Time)
+[debug] [2022-03-19T08:31:18.940Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-19T08:31:19.126Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-19T08:31:19.127Z] > authorizing via signed-in user (goplaniaakash14@gmail.com)
+[info] i  emulators: Starting emulators: auth, functions, firestore, hosting, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting, storage"}}
+[debug] [2022-03-19T08:31:19.155Z] [hub] writing locator at C:\Users\hp\AppData\Local\Temp\hub-angular-fire-a31ae.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: database, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdatabase, pubsub\u001b[22m"}}
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-03-19T08:31:19.200Z] defaultcredentials: writing to file C:\Users\hp\AppData\Roaming\firebase\goplaniaakash14_gmail_com_application_default_credentials.json
+[debug] [2022-03-19T08:31:19.202Z] Setting GAC to C:\Users\hp\AppData\Roaming\firebase\goplaniaakash14_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\hp\\AppData\\Roaming\\firebase\\goplaniaakash14_gmail_com_application_default_credentials.json"}}
+[debug] [2022-03-19T08:31:19.206Z] > refreshing access token with scopes: []
+[debug] [2022-03-19T08:31:19.207Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-19T08:31:19.407Z] <<< HTTP RESPONSE 200 {"date":"Sat, 19 Mar 2022 08:31:19 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-19T08:31:19.430Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/angular-fire-a31ae/adminSdkConfig [none]
+[debug] [2022-03-19T08:31:19.859Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/angular-fire-a31ae/adminSdkConfig 200
+[debug] [2022-03-19T08:31:19.860Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/angular-fire-a31ae/adminSdkConfig {"projectId":"angular-fire-a31ae","storageBucket":"angular-fire-a31ae.appspot.com","locationId":"asia-south1"}
+[info] i  firestore: Importing data from F:\Angular\Firebase Angular Course\firebase-latest-deps\test-data\firestore_export\firestore_export.overall_export_metadata {"metadata":{"emulator":{"name":"firestore"},"message":"Importing data from F:\\Angular\\Firebase Angular Course\\firebase-latest-deps\\test-data\\firestore_export\\firestore_export.overall_export_metadata"}}
+[debug] [2022-03-19T08:31:19.893Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2022-03-19T08:31:19.894Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-19T08:31:19.894Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\hp\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.13.1.jar","--host","localhost","--port",9080,"--seed_from_export","F:\\Angular\\Firebase Angular Course\\firebase-latest-deps\\test-data\\firestore_export\\firestore_export.overall_export_metadata","--rules","F:\\Angular\\Firebase Angular Course\\firebase-latest-deps\\firestore.rules","--functions_emulator","localhost:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\hp\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.13.1.jar\",\"--host\",\"localhost\",\"--port\",9080,\"--seed_from_export\",\"F:\\\\Angular\\\\Firebase Angular Course\\\\firebase-latest-deps\\\\test-data\\\\firestore_export\\\\firestore_export.overall_export_metadata\",\"--rules\",\"F:\\\\Angular\\\\Firebase Angular Course\\\\firebase-latest-deps\\\\firestore.rules\",\"--functions_emulator\",\"localhost:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"functions_emulator\",\"seed_from_export\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[info] i  auth: Importing config from F:\Angular\Firebase Angular Course\firebase-latest-deps\test-data\auth_export\config.json {"metadata":{"emulator":{"name":"database"},"message":"Importing config from F:\\Angular\\Firebase Angular Course\\firebase-latest-deps\\test-data\\auth_export\\config.json"}}
+[info] i  auth: Importing accounts from F:\Angular\Firebase Angular Course\firebase-latest-deps\test-data\auth_export\accounts.json {"metadata":{"emulator":{"name":"database"},"message":"Importing accounts from F:\\Angular\\Firebase Angular Course\\firebase-latest-deps\\test-data\\auth_export\\accounts.json"}}
+[debug] [2022-03-19T08:31:37.170Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-03-19T08:31:38.736Z] Temp file directory for storage emulator: C:\Users\hp\AppData\Local\Temp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: C:\\Users\\hp\\AppData\\Local\\Temp/firebase/storage/blobs"}}
+[debug] [2022-03-19T08:31:38.744Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/angular-fire-a31ae/sites 
+[debug] [2022-03-19T08:31:40.597Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/angular-fire-a31ae/sites 200
+[debug] [2022-03-19T08:31:40.598Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/angular-fire-a31ae/sites {"sites":[{"name":"projects/844768920868/sites/angular-fire-a31ae","defaultUrl":"https://angular-fire-a31ae.web.app","appId":"1:844768920868:web:26f399f01a29c1e9449fb1","type":"DEFAULT_SITE"}]}
+[debug] [2022-03-19T08:31:40.598Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/angular-fire-a31ae/webApps/1:844768920868:web:26f399f01a29c1e9449fb1/config [none]
+[debug] [2022-03-19T08:31:42.142Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/angular-fire-a31ae/webApps/1:844768920868:web:26f399f01a29c1e9449fb1/config 200
+[debug] [2022-03-19T08:31:42.142Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/angular-fire-a31ae/webApps/1:844768920868:web:26f399f01a29c1e9449fb1/config {"projectId":"angular-fire-a31ae","appId":"1:844768920868:web:26f399f01a29c1e9449fb1","storageBucket":"angular-fire-a31ae.appspot.com","locationId":"asia-south1","apiKey":"AIzaSyAEtcCYk6XGgRDMVASHtLLAulb2lMJ5zLU","authDomain":"angular-fire-a31ae.firebaseapp.com","messagingSenderId":"844768920868"}
+[info] i  hosting: Serving hosting files from: dist {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2022-03-19T08:31:42.330Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-19T08:31:42.330Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-03-19T08:31:42.330Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\hp\\.cache\\firebase\\emulators\\ui-v1.6.5\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\hp\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.6.5\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-03-19T08:31:42.549Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "F:\Angular\Firebase Angular Course\firebase-latest-deps\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"F:\\Angular\\Firebase Angular Course\\firebase-latest-deps\\functions\" for Cloud Functions..."}}
+[debug] [2022-03-19T08:31:42.620Z] Validating nodejs source
+[debug] [2022-03-19T08:31:47.081Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-19T08:31:47.082Z] Building nodejs source
+[debug] [2022-03-19T08:31:47.082Z] Analyzing nodejs backend spec
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ localhost:9099 │ http://localhost:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ localhost:5001 │ http://localhost:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ localhost:9080 │ http://localhost:4000/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Hosting        │ localhost:5000 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Storage        │ localhost:9199 │ http://localhost:4000/storage   │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 

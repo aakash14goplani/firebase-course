@@ -12,6 +12,7 @@
       <courses-card-list
         *ngIf="beginnersCourses$ | async as courses; else noCourses"
         (courseEdited)="reloadCourses()"
+        (courseDeleted)="reloadCourses()"
         [courses]="courses"
       >
       </courses-card-list>
@@ -21,6 +22,7 @@
       <courses-card-list
         *ngIf="advancedCourses$ | async as courses; else noCourses"
         (courseEdited)="reloadCourses()"
+        (courseDeleted)="reloadCourses()"
         [courses]="courses"
       >
       </courses-card-list>

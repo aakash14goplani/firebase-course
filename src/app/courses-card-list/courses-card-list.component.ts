@@ -2,6 +2,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Course } from '../model/course';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { EditCourseDialogComponent } from '../edit-course-dialog/edit-course-dialog.component';
+import { CoursesService } from '../services/courses.service';
+import { tap, catchError, throwError } from 'rxjs';
 
 @Component({
   selector: 'courses-card-list',
@@ -16,7 +18,8 @@ export class CoursesCardListComponent {
   @Output() courseDeleted = new EventEmitter<Course>();
 
   constructor(
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private coursesService: CoursesService
   ) { }
 
   editCourse(course: Course) {
@@ -36,6 +39,13 @@ export class CoursesCardListComponent {
           this.courseEdited.emit();
         }
       });
+  }
+
+  deleteCourse(course: Course) {
+    this.coursesService.deleteCoursesAndLessons(course.id).pipe(
+      tap(() => this.courseDeleted.emit(course)),
+      catchError(err => throwError(() => new Error(err)))
+    ).subscribe();
   }
 
 }

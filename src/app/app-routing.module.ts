@@ -6,6 +6,7 @@ import { CourseComponent } from './course/course.component';
 import { LoginComponent } from './login/login.component';
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { CoursesResolver } from './services/courses.resolver';
 
 const routes: Routes = [
   {
@@ -32,7 +33,8 @@ const routes: Routes = [
   },
   {
     path: 'courses/:courseUrl',
-    component: CourseComponent
+    component: CourseComponent,
+    resolve: { course: CoursesResolver }
   },
   {
     path: '**',
