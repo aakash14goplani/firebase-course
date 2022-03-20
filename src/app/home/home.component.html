@@ -2,7 +2,12 @@
   <div class="header">
     <h2 class="title">All Courses</h2>
 
-    <button mat-mini-fab color="accent" routerLink="create-course">
+    <button
+      mat-mini-fab
+      color="accent"
+      routerLink="create-course"
+      *ngIf="(user.usersRole$ | async)?.admin"
+    >
       <mat-icon class="add-course-btn">add</mat-icon>
     </button>
   </div>

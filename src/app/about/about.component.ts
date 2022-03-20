@@ -11,8 +11,7 @@ import { COURSES, findLessonsForCourse } from './db-data';
 })
 export class AboutComponent {
 
-  constructor(private db: AngularFirestore) {
-  }
+  constructor(private db: AngularFirestore) { }
 
   async uploadData() {
     const coursesCollection = this.db.collection('courses');
@@ -47,7 +46,7 @@ export class AboutComponent {
         console.log('Snapshot Change: ', snapshotChanges.payload.id, snapshotChanges.payload.data());
         console.log('Value Change: ', valueChanges); */
       },
-      error: err => console.error('Error: ', err)
+      error: err => console.error('Error while reading combined data on About page: ', err)
     });
   }
 
@@ -58,7 +57,7 @@ export class AboutComponent {
     ).get()
       .subscribe({
         next: data => data.forEach(doc => console.log(doc.id, doc.data())),
-        error: err => console.error('Error: ', err)
+        error: err => console.error('Error while reading collection data on About page: ', err)
       });
   }
 
@@ -69,7 +68,7 @@ export class AboutComponent {
     ).get()
       .subscribe({
         next: data => data.forEach(doc => console.log(doc.id, doc.data())),
-        error: err => console.error('Error: ', err)
+        error: err => console.error('Error while reading collection grouped data on About page: ', err)
       });
   }
 

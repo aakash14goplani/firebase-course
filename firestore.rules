@@ -9,24 +9,27 @@ service cloud.firestore {
 
     function isNonEmptyString(fieldName) {
       return request.resource.data[fieldName] is string
-          && request.resource.data[fieldName].size()> 0;
+          && request.resource.data[fieldName].size() > 0;
     }
 
     function isValidCourse() {
       // request.resource.data -> data in user request
       // resource.data -> data already in firestore DB
       return request.resource.data.seqNo is number
-          && request.resource.data.lessonsCount is number
-          && request.resource.data.lessonsCount > 0
+          && request.resource.data.seqNo >= 0
+          // && request.resource.data.lessonsCount is number
+          // && request.resource.data.lessonsCount > 0
           && isNonEmptyString("url");
 
     }
 
     function isAdmin() {
-      // variable -> {database}
-      // value of variable -> $(database)
+      // declare variable in path -> {database}
+      // use value of variable -> $(database)
       return isAuthenticated()
-          && get( /databases/$(database)/documents/users/$(request.auth.uid) ).data.isAdmin == true;
+          && 'admin' in request.auth.token
+          && request.auth.token.admin == true
+          // && get( /databases/$(database)/documents/users/$(request.auth.uid) ).data.isAdmin == true;
     }
 
     function isKnownUser() {
@@ -40,12 +43,20 @@ service cloud.firestore {
 
     match /courses/{courseId} {
       allow read: if isKnownUser();
-      allow write: if isAdmin() && isValidCourse() && resource.data.status == 'draft';
+      // allow write: if isAdmin() && isValidCourse(); // && resource.data.status == 'draft';
+      allow create, update: if isAdmin() && isValidCourse();
+      allow delete: if isAdmin();
 
       match /lessons/{lessonId} {
         allow read: if isKnownUser();
         allow write: if isAdmin();
       }
+    }
+
+    // since it is a collection-group i.e. collection nested within collection, it needs special handling
+    match /{path=**}/lessons/{lessonId} {
+      allow read: if isKnownUser();
+      allow write: if isAdmin();
     }
   }
 }

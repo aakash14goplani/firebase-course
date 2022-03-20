@@ -4,6 +4,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { EditCourseDialogComponent } from '../edit-course-dialog/edit-course-dialog.component';
 import { CoursesService } from '../services/courses.service';
 import { tap, catchError, throwError } from 'rxjs';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'courses-card-list',
@@ -19,7 +20,8 @@ export class CoursesCardListComponent {
 
   constructor(
     private dialog: MatDialog,
-    private coursesService: CoursesService
+    private coursesService: CoursesService,
+    public user: UserService
   ) { }
 
   editCourse(course: Course) {
