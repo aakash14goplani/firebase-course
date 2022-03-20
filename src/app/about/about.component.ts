@@ -46,7 +46,7 @@ export class AboutComponent {
         console.log('Snapshot Change: ', snapshotChanges.payload.id, snapshotChanges.payload.data());
         console.log('Value Change: ', valueChanges); */
       },
-      error: err => console.error('Error while reading combined data on About page: ', err)
+      error: err => alert('Error while reading combined data on About page.')
     });
   }
 

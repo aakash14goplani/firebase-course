@@ -38,8 +38,9 @@ export class CourseComponent implements OnInit {
   private fetchDataFromLessons(sortingOrder: any = 'asc') {
     this.coursesService.findLessons(this.course.id, sortingOrder, this.lastPageLoaded).pipe(
       finalize(() => this.loading = false)
-    ).subscribe((lessons) => {
-      this.lessons = this.lessons ? this.lessons.concat(lessons) : lessons;
+    ).subscribe({
+      next: lessons => this.lessons = this.lessons ? this.lessons.concat(lessons) : lessons,
+      error: error => alert('Error loading lessons')
     });
   }
 }

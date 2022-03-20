@@ -44,6 +44,7 @@ export class EditCourseDialogComponent {
         tap(() => this.dialogRef.close(courseToDelete)),
         catchError(err => throwError(() => {
           this.dialogRef.close();
+          alert('Could not update the course.');
           return new Error(err);
         }))
       ).subscribe();

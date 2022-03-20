@@ -46,7 +46,10 @@ export class CoursesCardListComponent {
   deleteCourse(course: Course) {
     this.coursesService.deleteCoursesAndLessons(course.id).pipe(
       tap(() => this.courseDeleted.emit(course)),
-      catchError(err => throwError(() => new Error(err)))
+      catchError((err) => {
+        alert('Could not delete the course.');
+        return throwError(() => new Error(err));
+      })
     ).subscribe();
   }
 
