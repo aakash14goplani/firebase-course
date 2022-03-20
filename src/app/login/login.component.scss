@@ -1,12 +1,12 @@
+@import "~firebaseui/dist/firebaseui.css";
 
 .auth-container {
-
+  margin-top: 4rem;
 }
-
 
 .login {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 4rem;
 }
