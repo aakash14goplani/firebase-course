@@ -14,7 +14,7 @@ export const environment = {
     appId: secretKey.firebaseAppId
   },
   api: {
-
+    createUser: 'http://localhost:5001/angular-fire-a31ae/us-central1/createUser'
   }
 };
 
