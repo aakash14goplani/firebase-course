@@ -8,11 +8,11 @@ service firebase.storage {
     }
 
     function isAuthenticated() {
-      return request.auth.uid !=null;
+      return request.auth != null;
     }
 
     function isSizeAllowed() {
-      return 5 * 1024 * 1024 <= request.resource.size;
+      return request.resource.size <= 5 * 1024 * 1024;
     }
 
     match /courses/{courseId}/{fileName} {

@@ -9,7 +9,7 @@
     ]
   },
   "hosting": {
-    "public": "dist",
+    "public": "dist/firebase-latest-deps",
     "ignore": [
       "firebase.json",
       "**/.*",
