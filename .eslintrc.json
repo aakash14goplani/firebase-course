@@ -9,6 +9,7 @@
         "*.ts"
       ],
       "parserOptions": {
+        "ecmaVersion": "latest",
         "project": [
           "tsconfig.json"
         ],
